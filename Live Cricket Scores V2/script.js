@@ -1,4 +1,4 @@
-// My API_KEY is in config.js file , const API_KEY = "";
+
 const API_URL = `https://api.cricapi.com/v1/currentMatches?apikey=${API_KEY}&offset=0`;
 
 async function fetchCricketScores() {
