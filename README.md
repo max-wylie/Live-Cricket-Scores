@@ -11,7 +11,7 @@ A web application that displays real-time cricket match scores using the CricAPI
 ## Tech Stack
 - **HTML**: Structure of the website.
 - **CSS**: Styling for the page, including light and dark modes.
-- **JavaScript**: Handles fetching data from the API, DOM manipulation, and dark mode functionality.
+- **JavaScript**: Handles fetching data from the API, updates the content on the page, and dark mode functionality.
 - **API**: [CricAPI](https://www.cricketdata.org)
 
 ## How to Run Locally
