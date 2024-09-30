@@ -1,0 +1,135 @@
+:root {
+    --light-bg: #f0f2f5;
+    --light-text: #333;
+    --light-card-bg: #ffffff;
+    --dark-bg: #1a1a1a;
+    --dark-text: #f0f0f0;
+    --dark-card-bg: #2a2a2a;
+    --accent-color: #b71c1c;
+    --accent-color-light: #e57373;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+#mode-toggle {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#mode-toggle:hover {
+    background-color: var(--accent-color-light);
+}
+
+#scores-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.score-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.light-mode .score-card {
+    background-color: var(--light-card-bg);
+}
+
+.dark-mode .score-card {
+    background-color: var(--dark-card-bg);
+}
+
+.score-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-header {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+}
+
+.match-header h2 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.match-status {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    opacity: 0.8;
+}
+
+.team-scores {
+    padding: 15px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team:last-child {
+    margin-bottom: 0;
+}
+
+.team-name {
+    font-weight: bold;
+}
+
+.team-score {
+    font-size: 0.9em;
+}
+
+.date-time {
+    font-size: 0.8em;
+    color: #666;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.dark-mode .date-time {
+    color: #999;
+}
